@@ -68,11 +68,4 @@ Estoy abierto a sugerencias, feedback, o simplemente a conectar con otros desarr
 
 ---
 
-## 🧾 Licencia
-
-Todo el contenido de este repositorio está en desarrollo y sujeto a cambios.  
-En el futuro se aplicará una licencia abierta (probablemente MIT).
-
----
-
 **CCD-SRL: Empezamos desde cero, pero vamos con visión clara.**
