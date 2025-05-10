@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto de Contabilidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="ADA13_ICON.png">
+</head>
+<body class="bg-gray-100 h-screen box-border">
+    <h1 class="font-black text-5xl text-center md:w-2/3 mx-auto mt-20">
+        CCD Experts SRL
+    </h1>
+    <h2 class="font-black text-red-700 text-center md:w-2/3 text-3xl mx-auto">Registros Contables</h2>
+
+    <div class="mt-12 md:flex container mx-auto ">
+        <div class="md:w-1/2 lg:w-2/5 mx-5">
+            <h2 class="font-black text-center text-3xl">Registrar transacciones</h2>
+            <p class="text-lg mt-5 text-center mb-10">Añade los gastos y 
+                <span class="text-red-600 font-bold">administralos</span>
+            </p>
+            <form id="formulario-registro"
+            class="bg-white shadow-md py-10 px-5 rounded-lg mb-10">
+                <div class="mb-5">
+                    <label for="fecha" class="block text-gray-700 uppercase font-bold text-sm">
+                        Fecha:
+                    </label>
+                    <input 
+                    class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    type="date"
+                    name="fecha"
+                    id="fecha"
+                    />
+                    </div>
+                <div class="mb-5">
+                    <label for="rnc" class="block text-gray-700 uppercase font-bold text-sm">
+                        RNC:
+                    </label>
+                    <input 
+                    class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    type="number"
+                    placeholder="Introduzca un RNC válido"
+                    name="rnc"
+                    id="rnc"
+                    />
+                </div>
+                <div class="mb-5">
+                    <label for="empresa" class="block text-gray-700 uppercase font-bold text-sm">
+                        Empresa:
+                    </label>
+                    <input 
+                    class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    type="text"
+                    placeholder="Introduzca una empresa"
+                    name="empresa"
+                    id="empresa"
+                    />
+                </div>
+                <div class="mb-5">
+                    <label for="descripcion" class="block text-gray-700 uppercase font-bold text-sm">
+                        Descripción:
+                    </label>
+                    <input 
+                    class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    type="text"
+                    placeholder="Descripción del gasto"
+                    name="descripcion"
+                    id="descripcion"
+                    />
+                </div>
+                <div class="mb-5">
+                    <label for="subtotal" class="block text-gray-700 uppercase font-bold text-sm">
+                        Subtotal:
+                    </label>
+                    <input 
+                    class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    type="number"
+                    placeholder="Introduzca el subtotal de la factura"
+                    name="subtotal"
+                    id="subtotal"
+                    />
+                </div>
+                <div class="mb-5">
+                    <label for="impSelect" class="block text-gray-700 uppercase font-bold text-sm">
+                        Impuestos:
+                    </label>
+                    <select required  id="impSelect" class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" 
+                    name="impSelect">
+                    <option value="1.0">Exento</option>
+                    <option value="1.18">18%</option>
+                    <option value="1.16">16%</option>
+                    </select>
+                </div>
+
+                <div class="mb-2" id="total">
+                    <h3 class="block text-gray-700 uppercase font-bold">Total:</h3>
+                    <div id="totalMostrar"></div>
+                </div>
+
+                <input class="mt-5 bg-red-600 w-full p-3 text-white uppercase font-bold hover:bg-red-700 transition-colors cursor-pointer" 
+                    value="Registrar Transacción"
+                    type="submit"/>
+            </form>
+            </div>
+        <div class="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-auto">
+            <h2 class="font-black text-center text-3xl">Listado de transacciones</h2>
+            <p class="text-lg mt-5 text-center mb-10">
+                Administra tus
+                <span class="text-red-600 font-bold"">Gastos</span>
+            </p>
+            <div id="gastos">
+                <p class="text-xl mt-5 mb-10 text-center">No hay gastos aún</p>
+                </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
